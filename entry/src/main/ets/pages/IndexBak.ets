@@ -86,16 +86,88 @@ struct Index {
         })
         .maxLines(2)
         .margin({ top: '10' })
+      Text("这是一段很长很长的文字这是一段很长很长的文字这是一段很长很长的文字这是一段很长很长的文字")
+        .fontColor("#0ff")
+        .fontSize(18)
+        .fontWeight(400)
+        .backgroundColor(Color.Pink)
+        .textOverflow({
+          overflow: TextOverflow.MARQUEE,
+        })
+        .maxLines(2)
+        .margin({ top: '10' })
+
+      Image($r('app.media.startIcon'))
+        .width("50")
+        .margin({ top: '10' })
+      Image('https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png')
+        .width("200")
 
 
+      TextInput({
+        placeholder: "占位符"
+      }).width('90%')
+        .id("username")
 
-      Text()
+      TextInput({
+        placeholder: "占位符"
+      }).type(InputType.Password)
+        .width('90%')
+        .margin({ "top": 10 })
+        .id("password")
+
+      Button("按钮")
+        .width('90%')
+        .margin({ "top": 10 })
+        .onTouch((e) => {
+          console.log('点击了按钮', 'onTouch', e)
+        })
+        .onClick((e) => {
+          console.log('点击了按钮', 'onClick', e)
+        })
+        .border({
+          width: { top: 2, right: 5 },
+          color: Color.Red,
+          style: BorderStyle.Solid,
+        })
+      Text("这是一段很长很长的文字")
+        .fontColor("#0ff")
+        .fontSize(18)
+        .fontWeight(400)
+        .backgroundColor(Color.Pink)
+        .maxLines(2)
+        .padding(10)
+        .border({
+          radius: { topLeft: 10 }
+        })
+      Text("这是一段文字")
+        .fontColor(Color.Red)
+        .width('100%')
+        .height(50)
+        .backgroundImage($r('app.media.app_icon'), ImageRepeat.XY)
+      Text("这是一段文字")
+        .fontColor(Color.Red)
+        .width('100%')
+        .height(50)
+        .backgroundImage($r('app.media.app_icon'))
+        .backgroundImagePosition(Alignment.TopStart)
+        .backgroundImagePosition(Alignment.Top)
+        .backgroundImagePosition(Alignment.TopEnd)
+        .backgroundImagePosition(Alignment.Start)
+        .backgroundImagePosition(Alignment.Center)
+        .backgroundImagePosition(Alignment.End)
+        .backgroundImagePosition(Alignment.BottomStart)
+        .backgroundImagePosition(Alignment.Bottom)
+        .backgroundImagePosition({ x: 10, y: 10 })
+
+      Text("这是一段文字")
         .fontColor(Color.Red)
         .width(300)
         .height(200)
         .borderWidth(1)
         .backgroundImage($r('app.media.startIcon'))
         .backgroundImagePosition({ x: 150, y: 100 })
+      Row(){}
     }
     .width("100%")
 
